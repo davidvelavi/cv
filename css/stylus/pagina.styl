@@ -1,0 +1,421 @@
+.Pagina
+	border solid 2px azul
+	background-color blanco
+	position relative
+	min-height 100vh
+	padding 30px
+	@media screen and (min-width:920px)
+		width 49%
+	&:not(:first-child)
+		margin-top  20px
+		@media screen and (min-width:920px)
+			margin-top 0
+	&.Horizontal
+		min-height 50vh
+		margin-top 20px
+		width 100%
+		border solid 2px azul
+		background-color blanco
+		.Pagina-Esquina
+			background-color azulOscuro
+			&.top-left,
+			&.top-right,
+			&.bottom-left,
+			&.bottom-right
+				border-color azul
+	&-Centrada
+		display flex
+		justify-content center
+		flex-direction column
+		align-items center
+	&-Principal
+		border solid 2px blanco
+		background-color azul
+		width 100%
+		.Pagina-Esquina
+			&.top-left,
+			&.top-right,
+			&.bottom-left,
+			&.bottom-right
+				border-color blanco
+	&-Esquina
+		background-color azulOscuro
+		height 30px
+		position absolute
+		width 30px
+		transition 0.3s
+		@media screen and (min-width:1024px)
+			width 50px
+			height 50px
+			&.top-left
+				border-bottom-right-radius 60px
+			&.top-right
+				border-bottom-left-radius 60px
+			&.bottom-left
+				border-top-right-radius 60px
+			&.bottom-right
+				border-top-left-radius 60px
+
+		&.top-left,
+		&.top-right
+			top -2px
+		&.top-left
+			left -2px
+			border-bottom-right-radius 40px
+			border-right 2px solid azul
+			border-bottom 2px solid azul
+		&.top-right
+			right -2px
+			border-bottom-left-radius 40px
+			border-left 2px solid azul
+			border-bottom 2px solid azul
+		&.bottom-left,
+		&.bottom-right
+			bottom -2px
+		&.bottom-left
+			left -2px
+			border-top-right-radius 40px
+			border-right 2px solid azul
+			border-top 2px solid azul
+		&.bottom-right
+			right -2px	
+			border-top-left-radius 40px
+			border-left 2px solid azul
+			border-top 2px solid azul
+	&-Liston
+		background-color blanco
+		-webkit-filter drop-shadow(0px 3px 3px rgba(negro,0.13))
+		height 15%
+		left 0
+		margin auto
+		position absolute
+		right 0
+		top 0
+		width 30px
+		transition 0.5s
+		&.Active
+			height 90%
+		@media screen and (min-width:768px)
+			width 40px
+			&:after
+				bottom -20px !important
+				border-width 20px !important
+		&:after
+			content ""
+			width 0 
+			height 0
+			border-width 15px
+			position absolute
+			border-style solid
+			border-color  transparent blanco
+			bottom -15px
+	&-ContPerfil
+		background-color azul
+		position relative
+	&-Perfil
+		border solid 4px blanco
+		border-radius 50%
+		box-shadow 0px 3px 3px rgba(negro,0.2)
+		height 130px
+		margin 0 auto
+		overflow hidden
+		position relative
+		transition 0.3s
+		width 130px
+		@media screen and (min-width:768px)
+			width 200px
+			height 200px
+	&-PerfilImg
+		width 100%
+		left -100%
+		top -100%
+		right -100%
+		bottom -100%
+		margin auto
+		position absolute
+	&-Nombre
+		color blanco
+		font-size 25px
+		margin 20px 0
+		text-shadow 0px 2px 2px rgba(negro,0.2)
+		text-align center
+		width 100%
+		transition 0.3s
+		@media screen and (min-width:768px)
+			font-size 30px
+	&-Especialidad
+		font-size 18px
+		color blanco
+		text-shadow 0px 2px 2px rgba(negro,0.2)
+		margin 20px auto
+		text-align center
+		transition 0.3s
+		@media screen and (min-width:768px)
+			font-size 20px
+	&-Titulo
+		font-size 20px
+		color negro2
+		font-weight bold
+		margin-top 10px
+		margin-bottom 10px
+		display inline-block
+		position relative
+		&:after
+			content ""
+			position absolute
+			left 0
+			bottom -4px
+			width 100%
+			height 3px
+			transition 0.3s
+			background-color azulOscuro
+			box-shadow 0px 2px 2px rgba(negro,0.2)
+		
+	&-Educacion
+		@media screen and (min-width:1024px)
+			margin-top 40px
+		&:nth-of-type(2) 
+			margin-top 30px
+	&-EducacionTitulo
+		font-size 14px
+		transition 0.3s
+		@media screen and (min-width:768px)
+			font-size 16px
+	&-EducacionHistorial
+		margin-top 20px
+		display flex
+		justify-content space-between
+	&-EducacionFecha
+		font-size 15px
+		width 35%
+		text-align center
+	&-EducacionEscuela
+		font-size 15px
+		width 60%
+	&-EducacionTituloCont
+		vertical-align top
+		transition 0.3s
+		display none
+		@media screen and (min-width:768px)
+			display inline-block
+			&:after
+				content: '\0000a0'
+	&-EducacionTituloFirst
+		transition 0.3s
+		@media screen and (min-width:768px)
+			text-transform uppercase
+	&-EducacionDescripcion
+		color gris
+		font-size 13px
+	&-ConocimientoWrapper
+		position relative
+		@media screen and (min-width:1024px)
+			margin-top 40px
+	&-Conocimiento
+		box-shadow 0px 2px 2px rgba(negro,0.2)
+		align-items center
+		background-color azul
+		color blanco
+		display flex
+		font-size 18px
+		height 40px
+		border-radius 4px
+		justify-content center
+		margin 0 auto
+		margin-top 10px
+		position relative
+		width 90%
+		z-index 1
+		transition 0.3s
+		@media screen and (min-width:768px)
+			font-size 20px
+			&:after,
+			&:before
+				border-color blanco transparent
+				border-style solid
+				border-width 10px
+				content ""
+				height 0
+				position absolute
+				top 10px
+				width 0
+			&:after
+				right 9px
+			&:before
+				left 9px
+	&-ConocimientoListon
+		-webkit-filter drop-shadow(0px 2px 2px rgba(negro,0.2))
+		background-color azul
+		height 40px
+		position absolute
+		top -10px
+		width 60px
+		&.right
+			right 0
+			&:after
+				right -20px
+		&.left
+			left 0
+			&:after
+				left -20px
+		&.right,
+		&.left
+			&:after
+				border-color azul transparent
+				border-style solid
+				border-width 20px
+				content ""
+				height 0
+				position absolute
+				top 0px
+				width 0
+	&-Linea
+		width 8px
+		height 0%
+		background-color azul
+		position absolute
+		left 0 
+		right 0
+		z-index 1
+		margin auto
+		transition 0.5s
+		&.Active
+			height 75%
+		&:after
+			background-color azulOscuro
+			border-radius 50%
+			bottom -14px
+			box-shadow 0px 2px 2px rgba(0,0,0,0.2)
+			content ""
+			height 22px
+			left -6px
+			position absolute
+			width 22px
+	&-ConocimientoItems
+		display flex
+		justify-content space-between
+	&-ConocimientoItem
+		width 50%
+		&.right
+			background-color blanco//red
+		&.left
+			background-color blanco//purple
+			.Pagina-TaskPadre
+				&:before
+					left 48%
+				&:after
+					left 0
+			.Pagina-TaskPadre
+				margin-top 40px
+				margin-bottom 80px
+	&-TaskPadre
+		//background-color pink
+		position relative
+		margin-top 100px
+		&.Active
+			&:after
+				width 50%
+			&:before
+				width 15px
+				height 15px
+		&:after,
+		&:before
+			content ""
+			position absolute
+			background-color azul
+			box-shadow 0px 2px 2px rgba(negro,0.2)
+		&:after
+			height 4px	
+			top 0
+			right 0
+			transition 0.5s
+			width 0%
+		&:before
+			background-color azulOscuro
+			content ""
+			width 0px
+			height 0px
+			transition 0.3s
+			top -5px
+			right 48%
+			border-radius 50%
+			z-index 1
+	&-TaskTitulo
+		padding-left 10px
+		padding-right 10px
+		padding-top 18px
+		text-align center
+		font-size 14px
+		transition 0.3s
+		@media screen and (min-width:768px)
+			font-size 16px
+		
+	&-TaskMore
+		width 25px
+		height 25px
+		line-height 20px
+		display block
+		margin 10px auto
+		outline none
+		cursor pointer
+		border none
+		background-color azul
+		color blanco
+		border-radius 50%
+		text-align center
+		transition transform 0.5s
+		box-shadow inset 0px -2px 2px azulOscuro, 0px 2px 2px rgba(negro,0.3)
+		&:hover,
+		&.Active
+			line-height 23px
+			box-shadow inset 0px -25px 2px azulOscuro, 0px 2px 2px rgba(negro,0)
+		&.Active
+			transform rotate(45deg)
+	&-ContSubTask
+		align-items center
+		display flex
+		justify-content center
+		margin 10px 0px
+		max-height 1000px
+		overflow hidden
+		transition 0.3s
+		&.Hide
+			max-height 0px
+	&-SubTask
+		text-align center
+		font-size 11px
+		list-style none
+		padding 5px
+	&-TituloExperiencia 
+		color negro2
+		display inline-block
+		font-size 20px
+		font-weight bold
+		margin-bottom 10px
+		margin-top 10px
+		padding 5px 20px
+		position relative
+		vertical-align top
+		border-top 3px solid azul
+		border-bottom 3px solid azul
+		@media screen and (min-width: 1024px)
+			margin-top: 40px;
+	&-ExperieciaItem
+		margin-top 10px
+	&-ExperieciaFecha
+		color azulOscuro
+		font-size 18px		
+	&-ExperieciaEmpresa
+		font-size 14px
+		font-weight bold
+		margin 10px 0px
+		transition 0.3s
+		@media screen and (min-width: 768px)
+			font-size 16px
+	&-ExperieciaDescripcion
+		font-size 12px
+		color gris
+		text-align justify
+		@media screen and (min-width: 768px)
+			font-size 14px
+		
